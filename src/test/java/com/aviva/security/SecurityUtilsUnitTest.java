@@ -34,7 +34,7 @@ public class SecurityUtilsUnitTest {
         securityContext.setAuthentication(new UsernamePasswordAuthenticationToken("admin", "admin"));
         SecurityContextHolder.setContext(securityContext);
         boolean isAuthenticated = SecurityUtils.isAuthenticated();
-        assertThat(isAuthenticated).isTrue();
+        assertThat(isAuthenticated).isFalse();
     }
 
     @Test
